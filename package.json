@@ -1,0 +1,124 @@
+{
+  "name": "react-atomic-design-demo",
+  "version": "1.0.0",
+  "description": "Webapp for demonstrating Atomic Design using React",
+  "main": "index.html",
+  "repository": "https://github.com/zakbutcher/react-atomic-design-demo.git",
+  "author": "Zak <zak.s.butcher@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "force-install": "yarn install --force",
+    "front": "next",
+    "lint": "tsc && yarn eslint \"app/**\" && lint-staged",
+    "pre-commit": "yarn run-s lint test",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "next build",
+    "export": "next export",
+    "build-static": "yarn run-s build export",
+    "deploy-to-site": "yarn build-static && aws s3 sync ./out s3://zakbutcher.io/ --delete --acl public-read --metadata-directive REPLACE --cache-control max-age=0,public",
+    "validate-template": "aws cloudformation validate-template --template-body file://cloudformation.yaml",
+    "delete-stack": "aws cloudformation delete-stack --stack-name zakbutcher-io && aws cloudformation wait stack-delete-complete --stack-name zakbutcher-io",
+    "create-stack": "aws cloudformation create-stack --stack-name zakbutcher-io --template-body file://cloudformation.yaml --capabilities CAPABILITY_IAM && aws cloudformation wait stack-create-complete --stack-name zakbutcher-io",
+    "refresh-stack": "yarn delete-stack && yarn create-stack",
+    "update-stack": "aws cloudformation update-stack --stack-name zakbutcher-io --template-body file://cloudformation.yaml --capabilities CAPABILITY_IAM && aws cloudformation wait stack-update-complete --stack-name zakbutcher-io"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit",
+      "post-checkout": "git pull && yarn force-install"
+    }
+  },
+  "lint-staged": {
+    "concurrent": false,
+    "linters": {
+      "**/*.{ts,tsx}": [
+        "prettier --write",
+        "git add"
+      ],
+      "**/*.{js,json}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "jest": {
+    "rootDir": "./",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-test.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/app"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/app/**",
+      "!**/__snapshots__/**",
+      "!**/types/**",
+      "!**/page-modules/**",
+      "!**/config/**"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/",
+      "/pages/"
+    ]
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^24.0.13",
+    "@types/next": "^8.0.5",
+    "@types/normalizr": "^2.0.18",
+    "@types/parse-link-header": "^1.0.0",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.15",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "axios": "^0.19.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-md-import-to-string": "^1.0.6",
+    "babel-preset-next": "^1.2.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "jest-styled-components": "^6.3.1",
+    "lint-staged": "^8.1.7",
+    "module-resolver": "^1.0.0",
+    "next": "^8.1.0",
+    "normalizr": "^3.4.0",
+    "npm-run-all": "^4.1.5",
+    "parse-link-header": "^1.0.1",
+    "polished": "^3.4.0",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-markdown": "^4.0.8",
+    "reselect": "^4.0.0",
+    "styled-components": "^4.2.0",
+    "ts-loader": "^6.0.1",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.4.5",
+    "typescript-styled-plugin": "^0.14.0",
+    "webpack": "^4.32.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^8.0.4",
+    "jest-dom": "^3.5.0"
+  }
+}

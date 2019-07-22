@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttons Primary Renders All Variants 1`] = `
+.c0 {
+  background-color: var(--primary);
+  border: none;
+  color: var(--white);
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c1 {
+  background-color: var(--secondary);
+  border: none;
+  color: var(--white);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  background-color: var(--tertiary);
+  border: none;
+  color: var(--white);
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c3 {
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c4 {
+  background-color: var(--white);
+  border: none;
+  color: var(--black);
+}
+
+.c4:hover {
+  cursor: pointer;
+}
+
+<div>
+  <button
+    class="c0"
+    data-testid="button"
+  >
+    Primary
+  </button>
+  <button
+    class="c1"
+    data-testid="button"
+  >
+    Primary
+  </button>
+  <button
+    class="c2"
+    data-testid="button"
+  >
+    Primary
+  </button>
+  <button
+    class="c3"
+    data-testid="button"
+  >
+    Primary
+  </button>
+  <button
+    class="c4"
+    data-testid="button"
+  >
+    Primary
+  </button>
+</div>
+`;
+
+exports[`Buttons Secondary Renders All Variants 1`] = `
+.c0 {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c1 {
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  background-color: transparent;
+  border: 2px solid var(--tertiary);
+  color: var(--tertiary);
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c3 {
+  background-color: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c4 {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.c4:hover {
+  cursor: pointer;
+}
+
+<div>
+  <button
+    class="c0"
+    data-testid="button"
+  >
+    Secondary
+  </button>
+  <button
+    class="c1"
+    data-testid="button"
+  >
+    Secondary
+  </button>
+  <button
+    class="c2"
+    data-testid="button"
+  >
+    Secondary
+  </button>
+  <button
+    class="c3"
+    data-testid="button"
+  >
+    Secondary
+  </button>
+  <button
+    class="c4"
+    data-testid="button"
+  >
+    Secondary
+  </button>
+</div>
+`;
+
+exports[`Buttons Tertiary Renders All Variants 1`] = `
+.c0 {
+  background-color: transparent;
+  border: none;
+  color: var(--primary);
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c1 {
+  background-color: transparent;
+  border: none;
+  color: var(--secondary);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  background-color: transparent;
+  border: none;
+  color: var(--tertiary);
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c3 {
+  background-color: transparent;
+  border: none;
+  color: var(--black);
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c4 {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+}
+
+.c4:hover {
+  cursor: pointer;
+}
+
+<div>
+  <button
+    class="c0"
+    data-testid="button"
+  >
+    Tertiary
+  </button>
+  <button
+    class="c1"
+    data-testid="button"
+  >
+    Tertiary
+  </button>
+  <button
+    class="c2"
+    data-testid="button"
+  >
+    Tertiary
+  </button>
+  <button
+    class="c3"
+    data-testid="button"
+  >
+    Tertiary
+  </button>
+  <button
+    class="c4"
+    data-testid="button"
+  >
+    Tertiary
+  </button>
+</div>
+`;

@@ -1,0 +1,15 @@
+# Custom
+.DS_Store
+node_modules
+.cache
+**/app/**/*.js
+**/*.js.map
+**/*.orig
+yarn-error.log
+dist
+.server
+.awcache
+.next
+.env
+out
+coverage
