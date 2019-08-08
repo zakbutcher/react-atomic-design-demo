@@ -1,0 +1,96 @@
+/* #region Avatar */
+.avatar-circle {
+  border-radius: 100%;
+  padding: 0.5em;
+  font-size: 0.8rem;
+}
+.avatar-circle * {
+  color: var(--white);
+}
+
+.avatar-bg-color-default {
+  background-color: var(--dark-grey);
+}
+
+.avatar-bg-color-red {
+  background-color: var(--red);
+}
+
+.avatar-bg-color-blue {
+  background-color: var(--blue);
+}
+
+.avatar-bg-color-green {
+  background-color: var(--green);
+}
+
+.avatar-bg-color-purple {
+  background-color: var(--purple);
+}
+/* #region Avatar */
+/* #region Button */
+button {
+  border-radius: 0;
+  border: 1px solid var(--medium-grey);
+  box-sizing: border-box;
+  padding: 6.5px 20px;
+}
+/* #endregion Button */
+/* #region Fonts */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1em;
+}
+
+.normal-weight {
+  font-weight: normal;
+}
+
+.bold-weight {
+  font-weight: bold;
+}
+
+.black-font {
+  color: var(--black);
+}
+
+.grey-font {
+  color: var(--dark-grey);
+}
+
+p.description {
+  color: var(--dark-grey);
+}
+/* #endregion Fonts */
+/* #region Images */
+.image {
+  min-width: 16em;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: var(--dark-grey);
+  background-size: contain;
+}
+/* #endregion Images */
+/* #region Input */
+input {
+  font-size: 1.7em;
+  border: 1px solid var(--medium-grey);
+  width: 100%;
+  padding: 4px;
+}
+/* #endregion Input */
