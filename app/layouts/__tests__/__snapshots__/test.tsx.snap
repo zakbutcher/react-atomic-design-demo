@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layouts BaseLayout Renders 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 64px;
+  border-radius: 0px;
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <h1>
+      Title Text
+    </h1>
+    <div>
+      Layout Content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layouts MultiColumn Renders 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-radius: 0px;
+}
+
+.c2 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 0px;
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c1"
+      data-testid="column-wrapper"
+    >
+      First Column
+    </div>
+    <div
+      class="c2 c1"
+      data-testid="column-wrapper"
+    >
+      Second Column
+    </div>
+    <div
+      class="c2 c1"
+      data-testid="column-wrapper"
+    >
+      Third Column
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layouts SplitLayout Renders 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-radius: 0px;
+}
+
+.c2 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 0 0 300px;
+  -ms-flex: 0 0 300px;
+  flex: 0 0 300px;
+  border-radius: 0px;
+}
+
+.c3 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-radius: 0px;
+}
+
+<div>
+  <div
+    class="c0 c1"
+  >
+    <div
+      class="c2 c1"
+    >
+      <div>
+        Left Panel
+      </div>
+    </div>
+    <div
+      class="c3 c1"
+    >
+      <div>
+        Right Panel
+      </div>
+    </div>
+  </div>
+</div>
+`;
