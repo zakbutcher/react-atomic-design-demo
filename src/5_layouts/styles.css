@@ -22,6 +22,11 @@
   flex-direction: column;
 }
 
+.scrollable {
+  width: 100%;
+  overflow: scroll;
+}
+
 .padding-sm {
   padding: 8px;
 }
@@ -47,6 +52,7 @@
 
 .flex-grow {
   flex: 1 0 0;
+  align-self: stretch;
 }
 
 .flex-shrink {
@@ -58,7 +64,7 @@
 }
 
 .align-stretch {
-  align-self: stretch;
+  align-items: stretch;
 }
 
 .align-center {
@@ -84,6 +90,10 @@
 .spacer-lg {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.spacer-fill-md {
+  flex: 1 0 1rem;
 }
 
 .bg-color-light-grey {
