@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { WatchLater, Home, Trending } from './6_pages';
 
-const pages = [WatchLater, Home, Trending];
-
 function App() {
-  const [activeIndex, setActiveIndex] = useState(2);
-  const [ActivePage, setActivePage] = useState(pages[activeIndex]);
+  const [activeIndex, setActiveIndex] = useState(0);
   const switchPage = () => {
-    if (activeIndex === pages.length - 1) {
+    if (activeIndex === 2) {
       setActiveIndex(0);
       return;
     }
@@ -15,11 +12,16 @@ function App() {
     return;
   };
 
-  useEffect(() => {
-    setActivePage(pages[activeIndex]);
-  }, [activeIndex]);
+  console.log('activeIndex: ', activeIndex);
 
-  return <div onClick={switchPage}>{ActivePage}</div>;
+  switch (activeIndex) {
+    case 0:
+      return <WatchLater togglePage={switchPage} />;
+    case 1:
+      return <Home togglePage={switchPage} />;
+    default:
+      return <Trending togglePage={switchPage} />;
+  }
 }
 
 export default App;

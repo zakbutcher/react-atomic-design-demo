@@ -42,6 +42,7 @@
 .padding-hamburger {
   padding: 16px 0px;
 }
+
 .padding-hot-dog {
   padding: 0px 16px;
 }
@@ -92,6 +93,10 @@
   width: 1.5rem;
 }
 
+.spacer-fill-sm {
+  flex: 1 0 0.5rem;
+}
+
 .spacer-fill-md {
   flex: 1 0 1rem;
 }
@@ -105,10 +110,10 @@
 }
 
 .small-scaling {
-  font-size: 10px;
+  font-size: 5px;
 }
 .normal-scaling {
-  font-size: 50px;
+  font-size: 10px;
 }
 .large-scaling {
   font-size: calc(1vw + 7px);

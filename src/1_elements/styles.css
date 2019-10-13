@@ -77,6 +77,16 @@ p.description {
   color: var(--dark-grey);
 }
 /* #endregion Fonts */
+/* #region Icons */
+#brand {
+  height: 30px;
+  width: 30px;
+  background-image: url(./android-icon-192x192.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* #endregion Icons */
 /* #region Images */
 .image {
   min-width: 16em;

@@ -5,9 +5,9 @@ import { Header, LeftNav, WatchLaterSummary, WatchLaterList } from '../4_modules
 
 const { Fill } = Flex;
 
-export const WatchLater = () => (
+export const WatchLater = props => (
   <div className="full-page">
-    <Header />
+    <Header togglePage={props.togglePage} />
     <Fill.Row alignItems={AlignItems.STRETCH}>
       <LeftNav />
       <WatchLaterSummary />

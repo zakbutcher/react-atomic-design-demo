@@ -53,6 +53,7 @@ const Row = props => (
     className={`flex row ${props.scrollable ? 'scrollable' : ''} ${getClassName(
       props,
     )}`}
+    onClick={props.onClick}
   >
     {props.children}
   </div>
@@ -61,7 +62,6 @@ Row.defaultProps = {
   padding: Padding.NONE,
   flex: FlexBehavior.DEFAULT,
   alignItems: AlignItems.CENTER,
-  scaling: FontScaling.SMALL,
 };
 
 const Column = props => (
@@ -76,7 +76,6 @@ const Column = props => (
 Column.defaultProps = {
   padding: Padding.NONE,
   flex: FlexBehavior.DEFAULT,
-  scaling: FontScaling.SMALL,
 };
 
 // #region Sandwiches
@@ -155,6 +154,7 @@ export const SpacerSize = {
   SMALL: 'spacer-sm',
   MEDIUM: 'spacer-md',
   LARGE: 'spacer-lg',
+  FILL_SMALL: 'spacer-fill-sm',
   FILL_MEDIUM: 'spacer-fill-md',
 };
 

@@ -1,5 +1,5 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
   faBug,
@@ -12,15 +12,15 @@ import {
   faFire,
   faStream,
   faFolder,
-  faPen
-} from "@fortawesome/free-solid-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { Colors } from "./colors";
+  faPen,
+} from '@fortawesome/free-solid-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { Colors } from './colors';
 
 const IconSize = {
-  DEFAULT: "2x",
-  XSMALL: "lg",
-  SMALL: "2x"
+  DEFAULT: '2x',
+  XSMALL: 'lg',
+  SMALL: '2x',
 };
 
 export const BaseIcon = props => (
@@ -53,3 +53,4 @@ export const Fire = props => <BaseIcon {...props} icon={faFire} />;
 export const Subscriptions = props => <BaseIcon {...props} icon={faStream} />;
 export const Folder = props => <BaseIcon {...props} icon={faFolder} />;
 export const Pencil = props => <BaseIcon {...props} icon={faPen} />;
+export const Brand = props => <div id="brand" />;
