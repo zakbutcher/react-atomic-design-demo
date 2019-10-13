@@ -33,16 +33,16 @@ export const HomeFeed = () => {
           <Fonts.Heading>SEE ALL</Fonts.Heading>
         </ShrinkWrap.Row>
         <ShrinkWrap.Row hamburger scrollable>
-          {videoList.map(video => (
-            <React.Fragment key={video.title}>
+          <Inject inject={<Spacer size={SpacerSize.FILL_SMALL} />}>
+            {videoList.map(video => (
               <VideoCard
+                key={video.title}
                 video={video}
                 direction="column"
                 imageScaling={FontScaling.LARGE}
               />
-              <Spacer size={SpacerSize.FILL_SMALL} />
-            </React.Fragment>
-          ))}
+            ))}
+          </Inject>
         </ShrinkWrap.Row>
       </Column>
       <Hr />

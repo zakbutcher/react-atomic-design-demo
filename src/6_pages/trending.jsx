@@ -10,7 +10,7 @@ export const Trending = props => (
     <Header togglePage={props.togglePage} />
     <Fill.Row>
       <LeftNav />
-      <Hamburger.Row>Hamburger</Hamburger.Row>
+      <Hamburger.Row>TRENDING PAGE PLACEHOLDER</Hamburger.Row>
     </Fill.Row>
   </div>
 );

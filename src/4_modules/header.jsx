@@ -12,6 +12,8 @@ import {
   FontWeight,
   Youtube,
   Brand,
+  Button,
+  Input,
 } from '../1_elements';
 
 const Row = Flex.Row;
@@ -30,10 +32,10 @@ export const Header = props =>
       </Row>
       <Spacer />
       <Row>
-        <input placeholder="Search" />
-        <button>
+        <Input placeholder="Search" />
+        <Button>
           <Search />
-        </button>
+        </Button>
       </Row>
       <Spacer />
       <Row>
@@ -45,7 +47,7 @@ export const Header = props =>
         <Spacer />
         <Bell />
         <Spacer />
-        <Brand>ZB</Brand>
+        <Brand />
       </Row>
     </Row>
   );
