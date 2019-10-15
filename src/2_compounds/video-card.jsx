@@ -16,19 +16,7 @@ export const VideoCard = props => {
       flex={FlexBehavior.GROW}
       scaling={props.imageScaling || FontScaling.NORMAL}
     >
-      <Column flex={FlexBehavior.STAY}>
-        <Image src={video.imgUrl} />
-      </Column>
-      <Fill.Column padding={Padding.SMALL} scaling={FontScaling.NORMAL}>
-        <Fonts.Heading weight={FontWeight.BOLD}>{video.title}</Fonts.Heading>
-        <Spacer size={SpacerSize.FILL_MEDIUM} />
-        <Fonts.SubHeading color={FontColor.GREY}>{video.author}</Fonts.SubHeading>
-        {!isRow && (
-          <Fonts.SubHeading color={FontColor.GREY}>
-            {video.views} - {video.uploaded}
-          </Fonts.SubHeading>
-        )}
-      </Fill.Column>
+      {/* todo */}
     </FlexWrapper>
   );
 };
