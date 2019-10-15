@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import { getClassName } from '../_utils';
 
+// #region Enums
 export const Padding = {
   NONE: '',
   SMALL: 'padding-sm',
@@ -47,6 +48,7 @@ export const FontScaling = {
   NORMAL: 'normal-scaling',
   LARGE: 'large-scaling',
 };
+// #endregion Enums
 
 const Row = props => (
   <div
@@ -96,7 +98,6 @@ const HotDog = {
   Column: HotDogColumn,
 };
 // #endregion Sandwiches
-
 // #region Home Supplies
 const ShrinkWrapRow = props => {
   if (props.hamburger) {
@@ -120,7 +121,6 @@ const ShrinkWrap = {
   Column: ShrinkWrapColumn,
 };
 // #endregion Home Supplies
-
 // #region MS Paint
 const fillProps = {
   flex: FlexBehavior.GROW,
